@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+       <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in css</title>
+
+    <style>
+         .card{
+            background-color: #a39e9e;
+            border-radius: 5px; 
+            padding-bottom: 20px;
+            width: 450px;
+        }
+
+        .card:hover {   
+            box-shadow: 0 4px 8px 5px black;
+        }
+
+
+        .card-icon{
+            text-align: center;
+        }
+        .card-icon img{
+            margin-top: 20px;
+            width: 50px;
+        }
+        .rounded-img{
+            border-radius: 50%;
+            border: 5px solid white;
+            padding: 15px;   
+        }
+
+        .card-title h2{
+            text-align: center;
+            background-color: #616161 ;
+            color: white;
+            padding: 10px;
+        }
+
+
+        .skills-container li{
+            list-style: none;
+            margin: 50px 0;
+            margin-right: 50px;
+            font-weight: bolder;
+            text-transform: uppercase;
+            position: relative; 
+
+        }
+
+        .skills-container li::before{
+            content: '';
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 100%;
+            height: 25px;
+            background-color: rgba(131, 77, 194, 0.5);
+            border-radius: 1000px;
+        }
+
+        .skills-container li::after{
+            content: '';
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 0;
+            height: 25px;
+            background-color:   rgb(121, 5, 253);
+            border-radius: 1000px;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;           
+            animation-fill-mode: forwards;
+
+        }
+
+        .skills-container li.html::after{
+            animation-name: html;
+
+        }
+
+        @keyframes html{
+            to{
+                width: 90%;
+                background-color: orange;
+            }
+        }
+        .skills-container li.html::after{
+            animation-name: html;
+
+        }
+        .skills-container li.css::after{
+            animation-name: css;
+
+        }
+        .skills-container li.js::after{
+            animation-name: js;
+
+        }
+        .skills-container li.bootstrap::after{
+            animation-name: bootstrap;
+
+        }
+        .skills-container li.node::after{
+            animation-name: node;
+
+        }
+        .skills-container li.react::after{
+            animation-name: react;
+
+        }
+        @keyframes html{
+            to{
+                width: 80%;
+                background-color: rgb(18, 134, 27);
+            }
+        }
+        @keyframes css{
+            to{
+                width: 90%;
+                background-color: blue);
+            }
+        }
+        @keyframes js{
+            to{
+                width: 100%;
+                background-color: orange;
+            }
+        }
+        @keyframes bootstrap{
+            to{
+                width: 70%;
+                background-color: red;
+            }
+        }
+        @keyframes node{
+            to{
+                width: 100%;
+                background-color: blue;
+            }
+        }
+        @keyframes react{
+            to{
+                width: 80%;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+        <div class="card">
+            <div class="card-icon">                 
+                <img class="rounded-img" src="images/skill.png" alt="">               
+            </div>
+            <div class="card-title">
+                <h2 >SIFAT AKBAR</h2>
+            </div>
+            <div class="card-description">
+                <div class="skills-container">
+                    <ul>
+                        <li class="html">ENGLISH</li>
+                        <li class="css">BANGLA</li>
+                        <li class="js">MATH</li>
+                        <li class="bootstrap">SCIENCE</li>
+                        <li class="node">ICT</li>
+                        <li class="react">ACCOUNTING</li>
+
+
+                    </ul>
+                </div>                   
+            </div>
+        </div>
+
+
+</body>
+</html> 
